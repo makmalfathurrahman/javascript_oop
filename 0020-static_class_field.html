@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0020-static_class_field</title>
+  </head>
+  <body>
+    <script>
+      class Cow {
+        static name = "Cow";
+        static feet = 0;
+      }
+
+      const cow = new Cow();
+      console.log(cow);
+      console.log(Cow.name);
+      console.log(Cow.feet);
+    </script>
+  </body>
+</html>

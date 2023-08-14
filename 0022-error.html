@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0022-error</title>
+  </head>
+  <body>
+    <script>
+      class Calculation {
+        static sum(num1, num2) {
+          if ((num1 == null, num2 == null)) {
+            throw new Error("num1 and num2 is null");
+          }
+          return num1 + num2;
+        }
+      }
+
+      console.log(Calculation.sum());
+    </script>
+  </body>
+</html>

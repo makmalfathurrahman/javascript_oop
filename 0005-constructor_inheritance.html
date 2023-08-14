@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0005-constructor_inheritance</title>
+  </head>
+  <body>
+    <script>
+      function Animal(name) {
+        this.name = name;
+        this.feet = 0;
+        this.habitats = function (habitats) {
+          return `${this.name} habitats is ${habitats}`;
+        };
+      }
+
+      function Snake(name, type) {
+        Animal.call(this, name);
+        this.type = type;
+      }
+
+      const snake = new Snake("snake", "reptile");
+      console.log(snake);
+    </script>
+  </body>
+</html>

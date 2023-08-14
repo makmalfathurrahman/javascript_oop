@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0006-prototype</title>
+  </head>
+  <body>
+    <script>
+      function Animal(name) {
+        this.name = name;
+        this.feet = 0;
+        this.habitats = function (habitats) {
+          return `${this.name} habitats is ${habitats}`;
+        };
+      }
+
+      Animal.prototype.feet = function () {
+        console.log(this.feet);
+      };
+
+      const cow = new Animal("cow");
+      cow.feet = function () {
+        console.log(4);
+      };
+      cow.feet();
+      console.log(cow);
+      console.log(cow.habitats("meadow"));
+    </script>
+  </body>
+</html>

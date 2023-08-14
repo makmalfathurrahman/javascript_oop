@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0019-instanceof</title>
+  </head>
+  <body>
+    <script>
+      class Country {}
+      class City {}
+      class District extends Country {}
+
+      const indonesia = new Country();
+      const jakarta = new City();
+      const north_jakarta = new District();
+
+      console.log(typeof indonesia);
+      console.log(typeof jakarta);
+
+      console.log(indonesia instanceof Country);
+      console.log(indonesia instanceof City);
+
+      console.log(jakarta instanceof Country);
+      console.log(jakarta instanceof City);
+
+      console.log(north_jakarta instanceof Country);
+      console.log(north_jakarta instanceof City);
+      console.log(north_jakarta instanceof District);
+    </script>
+  </body>
+</html>

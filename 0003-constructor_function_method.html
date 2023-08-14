@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0003-object_method</title>
+  </head>
+  <body>
+    <script>
+      function Animal() {
+        this.name = "";
+        this.feet = 0;
+        this.habitats = function (habitats) {
+          return `${this.name} habitats is ${habitats}`;
+        };
+      }
+
+      const tiger = new Animal();
+      tiger.name = "tiger";
+      tiger.feet = 4;
+      let tigerHabitats = tiger.habitats("jungle");
+
+      const whale = new Animal();
+      whale.name = "whale";
+      whale.feet = 0;
+      let whaleHabitats = whale.habitats("ocean");
+
+      console.log(tiger);
+      console.log(tigerHabitats);
+      console.log(whale);
+      console.log(whaleHabitats);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0015-getter_setter</title>
+  </head>
+  <body>
+    <script>
+      class Location {
+        constructor(country, city) {
+          this.country = country;
+          this.city = city;
+        }
+
+        get location() {
+          return `${this.country} ${this.city}`;
+        }
+
+        set location(value) {
+          const result = value.split(" ");
+          this.country = result[0];
+          this.city = result[1];
+        }
+      }
+
+      const place = new Location("Indonesia", "Jakarta");
+      console.log(place);
+      console.log(place.location);
+
+      const newPlace = "Indonesia Bandung";
+      console.log(newPlace);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0017-private_class_field</title>
+  </head>
+  <body>
+    <script>
+      class Calculation {
+        #number = 0;
+
+        increment() {
+          this.#number++;
+        }
+
+        decrement() {
+          this.#number--;
+        }
+
+        get() {
+          return this.#number;
+        }
+      }
+
+      const number = new Calculation();
+      number.increment();
+      number.increment();
+      number.increment();
+
+      console.log(number.get());
+    </script>
+  </body>
+</html>

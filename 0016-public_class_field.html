@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0016-public_class_field</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        name;
+        feet;
+        food;
+
+        constructor(name, feet, food) {
+          this.name = name;
+          this.feet = feet;
+          this.food = food;
+        }
+      }
+
+      const cow = new Animal("cow", 4, "grass");
+      console.log(cow);
+    </script>
+  </body>
+</html>

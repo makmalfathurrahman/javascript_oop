@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0023-error_handling</title>
+  </head>
+  <body>
+    <script>
+      class Calculation {
+        static sum(num1, num2) {
+          if ((num1 == null, num2 == null)) {
+            throw new Error("num1 and num2 is null");
+          }
+          return num1 + num2;
+        }
+      }
+
+      try {
+        console.log(Calculation.sum());
+      } catch (error) {
+        console.error(`ERROR: ${error.message}`);
+      }
+    </script>
+  </body>
+</html>

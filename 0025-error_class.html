@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0024-finally</title>
+  </head>
+  <body>
+    <script>
+      class ValidationError extends Error {
+        constructor(message, field) {
+          super(message);
+          this.field = field;
+        }
+      }
+
+      class Calculation {
+        static sum(num1, num2) {
+          if ((num1 == null, num2 == null)) {
+            throw new ValidationError("num1 and num2 is null", "parameter");
+          }
+          return num1 + num2;
+        }
+      }
+
+      try {
+        console.log(Calculation.sum());
+      } catch (error) {
+        if (error instanceof ValidationError) {
+          console.error(`ERROR at ${error.field}: ${error.message}`);
+        } else {
+          console.error(`ERROR: ${error.message}`);
+        }
+      } finally {
+        console.log("Program finished!");
+      }
+    </script>
+  </body>
+</html>

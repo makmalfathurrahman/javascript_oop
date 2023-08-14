@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0014-super_method</title>
+  </head>
+  <body>
+    <script>
+      class Country {
+        constructor(name) {
+          this.name = name;
+        }
+
+        location() {
+          console.log(`the location is ${this.name}`);
+        }
+      }
+
+      class City extends Country {
+        constructor(name, city) {
+          super(name);
+          this.city = city;
+        }
+
+        location() {
+          super.location();
+          console.log(`the ${this.city} is ${this.name}`);
+        }
+      }
+
+      const city = new City("Jakarta", "city");
+      city.location();
+    </script>
+  </body>
+</html>

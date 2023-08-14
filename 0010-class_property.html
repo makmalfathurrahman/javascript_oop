@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0010-class_property</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = name;
+          console.log(`animal: ${this.name}`);
+        }
+      }
+
+      const animal = new Animal("bird");
+      console.log(animal);
+      console.log(animal.name);
+    </script>
+  </body>
+</html>

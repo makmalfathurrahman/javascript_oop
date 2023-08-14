@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0002-object_property</title>
+  </head>
+  <body>
+    <script>
+      function Animal() {
+        this.name = "";
+        this.color = "";
+        this.feet = 0;
+      }
+
+      const tiger = new Animal();
+      tiger.name = "tiger";
+      tiger.color = "orange black white";
+      tiger.feet = 4;
+
+      const whale = new Animal();
+      tiger.name = "whale";
+      whale.color = "black white";
+      whale.feet = 0;
+
+      console.log(tiger);
+      console.log(whale);
+    </script>
+  </body>
+</html>
